@@ -36,7 +36,7 @@ public struct OKChatRequestData: Sendable {
     }
     
     /// A structure that represents a single message in the chat request.
-    public struct Message: Encodable, Sendable {
+    public struct Message: Codable, Sendable {
         /// A ``Role`` value indicating the sender of the message (system, assistant, user).
         public let role: Role
         
@@ -53,7 +53,7 @@ public struct OKChatRequestData: Sendable {
         }
         
         /// An enumeration that represents the role of the message sender.
-        public enum Role: String, Encodable, Sendable {
+        public enum Role: String, Codable, Sendable {
             /// Indicates the message is from the system.
             case system
             
